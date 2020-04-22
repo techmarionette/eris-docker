@@ -4,6 +4,9 @@ fi
 
 cd "$(dirname "$0")" || exit
 
+git config user.email "reliza@techmarionnete.com"
+git config user.name "R. Eliza"
+
 content="$( sed "s/^> Version: .*$/> Version: ${1}/" README.md )"
 echo "$content" > README.md
 
