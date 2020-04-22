@@ -2,6 +2,8 @@ if [ "$#" -ne 2 ]; then
     echo "Usage: update <tag> <branch>"
 fi
 
+cd "$(dirname "$0")" || exit
+
 content="$( sed "s/^> Version: .*$/> Version: ${1}/" README.md )"
 echo "$content" > README.md
 
