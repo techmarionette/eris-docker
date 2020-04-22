@@ -1,0 +1,25 @@
+{
+  "Server": {
+    "Port": 8080
+  },
+  "TLS": {
+    "Key": "",
+    "Certificate": ""
+  },
+  "Store": {
+    "BoltURL": "bolt://localhost:7687",
+    "Username": "neo4j",
+    "Password": "password",
+    "TLS": false
+  },
+  "Security": {
+    "Secret": ""
+  },
+  "Log": {
+    "JSON": false,
+    "Local": "",
+    "Remote": "",
+    "Data": ""
+  },
+  "Watchers": []
+}
