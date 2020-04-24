@@ -1,6 +1,7 @@
 {
   "Server": {
-    "Port": 8080
+    "Port": 8080,
+    "WebApp": false
   },
   "TLS": {
     "Key": "",
@@ -13,7 +14,9 @@
     "TLS": false
   },
   "Security": {
-    "Secret": ""
+    "Secret": "",
+    "BlockKey": "",
+    "HashKey": ""
   },
   "Log": {
     "JSON": false,

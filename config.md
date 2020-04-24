@@ -11,6 +11,10 @@ purpose.
 
 Defines the port Eris will run on. This defaults to `8080`.
 
+### WebApp
+
+If true the Eris Web UI will be enabled. This is disabled by default.
+
 ## TLS Section
 
 ### Key
@@ -50,6 +54,14 @@ instance will need to be configured for TLS.
 Secret used when generating Bearer tokens. By default this is a random key set
 on startup, but can be set in the configuration, or via the `-s` flag to allow
 concurrent instances of eris to service requests.
+
+### HashKey
+
+A 64 or 32 character key for use with secure cookies.
+
+## BlockKey
+
+A 32 or 16 character key for use with secure cookies.
 
 ## Log Section
 
