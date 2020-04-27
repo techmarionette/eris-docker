@@ -1,90 +1,26 @@
 # Eris Configuration Settings
 
+Eris can be configured through a variety of methods to allow for flexibility. 
+Base config is normally provided through a JSON config file. Overrides for this
+can be set in environment variables. Finally, command line arguments can be 
+passed to Eris which take precedence over everything. Details for the settings
+can be found using `eris -h` or `eris --help`.
+
+> Note: `-h`, `-c`, and `-p` have no equivalent config file setting.
+
 Eris is configured via a JSON configuration file. The file 
 [config-defaults.json](./config-defaults.json) contains an example set of 
 configuration options and their default values. This file explains their 
 purpose.
 
-## Server Section
+## Watchers
 
-### Port
+Watchers can be to look for, and process data files. Watchers are configured via
+a separate JSON file specified by the `--watchers` flag (`$ERIS_WATCHERS`, or
+the `watchers` entry in the config file can also be used). The file is a JSON
+list of watchers. `watchers-example.json` gives a simple example configuration.
 
-Defines the port Eris will run on. This defaults to `8080`.
-
-### WebApp
-
-If true the Eris Web UI will be enabled. This is disabled by default.
-
-## TLS Section
-
-### Key
-
-Path to the TLS Key. When set with `Certificate` Eris will use TLS for all
-inbound connections.
-
-### Certificate
-
-Path to the TLS Certificate. When set with `Key` Eris will use TLS for all
-inbound connections.
-
-## Store Section
-
-### BoltURL
-
-URL to connect to Neo4j via bolt. This is generally: `bolt://<db hostname>:7687`
-and defaults to trying to connect via localhost.
-
-### Username
-
-The Neo4j username.
-
-### Password
-
-The Neo4j password. This can also be set using the `--neo4j_password` flag.
-
-### TLS
-
-Boolean used to set TLS for the bolt protocol. If set to `true` then the Neo4j
-instance will need to be configured for TLS.
-
-## Security Section
-
-### Secret
-
-Secret used when generating Bearer tokens. By default this is a random key set
-on startup, but can be set in the configuration, or via the `-s` flag to allow
-concurrent instances of eris to service requests.
-
-### HashKey
-
-A 64 or 32 character key for use with secure cookies.
-
-## BlockKey
-
-A 32 or 16 character key for use with secure cookies.
-
-## Log Section
-
-### JSON
-
-Be default Eris logs using plain text. This will change the logger to output
-messages in JSON format.
-
-### Local
-
-If set Eris will log to this file, otherwise it logs to `stdout`.
-
-> Note: Eris doesn't implement log rotation. This should be done by something
-like `logrotate(8)`.
-
-### Remote
-
-Remote syslog host. If configured Eris will connect via UDP and forward log
-messages to the remote log service.
-
-## Watchers Section
-
-Watchers can be to look for, and process data files. A watcher is defined
+A watcher is defined
 using:
 
 ```json

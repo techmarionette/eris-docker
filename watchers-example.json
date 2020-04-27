@@ -1,0 +1,12 @@
+[
+  {
+    "Model": "example",
+    "Source": "data",
+    "Mapping": "people",
+    "User": "admin",
+    "Input":"./eris/data",
+    "DataType": "csv",
+    "Archive": "./eris/data/archive",
+    "Interval": "60s"
+  }
+]

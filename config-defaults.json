@@ -1,28 +1,31 @@
 {
-  "Server": {
-    "Port": 8080,
-    "WebApp": false
-  },
-  "TLS": {
-    "Key": "",
-    "Certificate": ""
-  },
-  "Store": {
-    "BoltURL": "bolt://localhost:7687",
-    "Username": "neo4j",
-    "Password": "password",
-    "TLS": false
-  },
-  "Security": {
-    "Secret": "",
-    "BlockKey": "",
-    "HashKey": ""
-  },
-  "Log": {
-    "JSON": false,
-    "Local": "",
-    "Remote": "",
-    "Data": ""
-  },
-  "Watchers": []
+  "port": 8080,
+  "webapp": false,
+  "tls-key": "",
+  "tls-certificate": "",
+
+  "bolt-url": "bolt://localhost:7687",
+  "bolt-user": "neo4j",
+  "bolt-password": "password",
+  "bolt-tls": false,
+
+  "api-secret": "",
+  "cookie-hash-key": "",
+  "cookie-block-key": "",
+  "session-ttl": "12h",
+  "login-timebox": "500ms",
+
+  "source-limiter-depth": 1000,
+  "source-limiter-limit": 100,
+  "source-limiter-ttl": "1s",
+
+  "user-limiter-depth": 1000,
+  "user-limiter-limit": 5,
+  "user-limiter-ttl": "1s",
+
+  "log-json": false,
+  "local-log": "",
+  "remote-log": "",
+
+  "watchers": ""
 }
