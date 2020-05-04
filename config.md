@@ -31,10 +31,13 @@ using:
   "User": "user to load the data as",
   "Input":"path to directory where data will be dumped",
   "DataType": "csv",
+  "Strip": 0,
   "Archive": "path to directory where processed files will be moved to",
   "Interval": 60
 }
 ```
+
+`Strip` is the number of lines to strip from the head of the file.
 
 `Interval` is the time, in seconds, between checks of the `Input` directory for
 new data.
