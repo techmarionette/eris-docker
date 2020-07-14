@@ -1,6 +1,6 @@
 # eris-docker
 
-> Version: v0.23.21
+> Version: v0.23.22
 
 Docker image for Eris. To load the docker file use:
 
