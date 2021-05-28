@@ -1,6 +1,5 @@
 {
   "port": 8080,
-  "webapp": false,
   "tls-key": "",
   "tls-certificate": "",
 
@@ -8,10 +7,9 @@
   "bolt-user": "neo4j",
   "bolt-password": "password",
   "bolt-tls": false,
+  "bolt-retries": 5,
 
   "api-secret": "",
-  "cookie-hash-key": "",
-  "cookie-block-key": "",
   "session-ttl": "12h",
   "login-timebox": "500ms",
 
@@ -23,9 +21,22 @@
   "user-limiter-limit": 5,
   "user-limiter-ttl": "1s",
 
-  "log-json": false,
-  "local-log": "",
-  "remote-log": "",
+  "console-disable-timestamp": false,
+  "console-timestamp-format": "",
+  "console-format": "",
+  "console-output": "stdout",
+  "console-disable-colour": false,
+
+  "log-disable-timestamp": false,
+  "log-timestamp-format": "",
+  "log-format": "",
+  "log-path": "./eris.log",
+
+  "syslog-disable-timestamp": false,
+  "syslog-timestamp-format": "",
+  "syslog-format": "",
+  "syslog-network": "",
+  "syslog-address": "",
 
   "watchers": ""
 }
